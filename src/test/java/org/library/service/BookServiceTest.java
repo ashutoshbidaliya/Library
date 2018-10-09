@@ -42,7 +42,7 @@ public class BookServiceTest {
 		final String author = "Leena Hayden";
 		
 		//now run the test
-		final Book result = bookServiceTest.findByAuthor(author);
+		final Book result = bookServiceTest.getBook(author);
 		
 		//Verify the results.
 		assertThat(author.equals(result.getAuthor()));

@@ -5,10 +5,10 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="Books")
@@ -33,6 +33,7 @@ public class Book {
 	
 */	@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "Create_Date", nullable = false)
+	@Transient
 	private Date createDate;
 	
 	public int getCode() {
